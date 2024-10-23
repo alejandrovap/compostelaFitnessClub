@@ -1,24 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compostela Fitness Club</title>
 </head>
+
 <body>
     <h1>Welcome to the 24x7 Compostela Fitness Club : Courts Reservation Page!!</h1>
     <img src="./img/planification.png" alt="Calendar Photo" width="500">
     <form action="nothing.php" method="post">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name">
-        <p>Are you a Member?</p>
-        <label for="member">Member</label>
-        <input type="radio" name="member" id="member">
-        <label for="nonMember">Non-member</label>
-        <input type="radio" name="nonMember" id="nonMember">
+        <fieldset>
+            <legend>Member Demographics</legend>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+            <p>Are you a Member?</p>
+            <label for="member">Member</label>
+            <input type="radio" name="member" id="member" value="yes">
+            <label for="nonMember">Non-member</label>
+            <input type="radio" name="member" id="nonMember" value="no">
+            <br><br>
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
+        </fieldset>
+        <label for="facility">Facility</label>
+        <select name="facility" id="facility">
+            <option value="indoor football">Indoor football</option>
+            <option value="badminton">Badminton</option>
+            <option value="squash">Squash</option>
+            <option value="racquetball">Racquetball</option>
+            <option value="basquetball">Basquetball</option>
+        </select>
         <br><br>
-        <label for="email">Email</label>
-        <input type="text" name="email" id="email">
-    </form>
+        <label for="date">Select a reservation date and time:</label>
+        <br><br>
+        <input type="date" name="date" id="date">
+        <input type="time" name="time" id="time">
+        <br><br>
+        <input type="checkbox" name="reservationPolicy" id="policy" value="accepted">
+        <label for=policy">I agree to the club's reservation policy</label>
+        <br><br>
+        <input type="submit" value="Submit">
 </body>
+
 </html>
